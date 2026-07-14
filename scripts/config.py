@@ -9,8 +9,8 @@ import os
 # 路径
 # ---------------------------------------------------------------------------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-CACHE_DIR = os.path.join(BASE_DIR, "cache")
-OUTPUT_DIR = os.path.join(BASE_DIR, "output")
+CACHE_DIR = os.environ.get("MSRP_CACHE_DIR", os.path.join(BASE_DIR, "cache"))
+OUTPUT_DIR = os.environ.get("MSRP_OUTPUT_DIR", os.path.join(BASE_DIR, "output"))
 os.makedirs(CACHE_DIR, exist_ok=True)
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 

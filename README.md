@@ -20,7 +20,9 @@ cd scripts
 python main.py
 ```
 
-All market and macro data is fetched on first run via [akshare](https://github.com/akfamily/akshare) (free, public sources) and cached locally under `scripts/cache/` — no data files are bundled in this repo. Outputs (performance table + charts) land in `scripts/output/`.
+All market and macro data is fetched on first run via [akshare](https://github.com/akfamily/akshare) (free, public sources) and cached locally under `scripts/cache/` — no data files are bundled in this repo. Outputs (performance table + charts) land in `scripts/output/`. Set `MSRP_CACHE_DIR` / `MSRP_OUTPUT_DIR` to redirect these to a writable location if the repo itself is checked out read-only (e.g. installed as a shared skill).
+
+Last verified with akshare 1.18.64.
 
 ## Layout
 
@@ -37,6 +39,10 @@ scripts/                          # the model itself
 references/
   joint_rp_diagnosis_notes.md     # worked example: diagnosing a Sharpe gap across strategies/cap levels
 ```
+
+Methodology based on the public summary of a CICC research report
+(《量化配置模型(3):如何应对低利率环境》, June 2026). This repo is an
+independent reimplementation; no original report content is included.
 
 ## Disclaimer
 

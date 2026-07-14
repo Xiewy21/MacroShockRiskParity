@@ -1,6 +1,6 @@
 ---
 name: macro-shock-risk-parity
-description: Backtest and run a multi-asset risk-parity allocation model (Asset RP / Macro RP / Joint RP) across CSI 300, CSI 500, HSI, S&P 500, Chinese government/credit bonds, convertibles, gold, and commodities, with a six-dimension macro shock overlay (growth/inflation/liquidity/rates/credit/external) extracted via Kalman filtering. Use when the user wants to run, extend, or debug this risk-parity backtest, add/remove assets or macro factors, tune cap/shrinkage/smoothing parameters, or understand why Joint RP over/underperforms in a given period.
+description: Backtest and run a multi-asset risk-parity allocation model (Asset RP / Macro RP / Joint RP) across CSI 300, CSI 500, HSI, S&P 500, Chinese government/credit bonds, convertibles, gold, and commodities, with a six-dimension macro shock overlay (growth/inflation/liquidity/rates/credit/external) extracted via Kalman filtering. Use when the user wants to run, extend, or debug this risk-parity backtest, add/remove assets or macro factors, tune cap/shrinkage/smoothing parameters, or understand why Joint RP over/underperforms in a given period. Chinese keywords: 风险平价、宏观冲击、资产配置回测、Macro RP、Joint RP
 ---
 
 # Macro Shock Risk Parity
@@ -34,10 +34,13 @@ Invoke it when the user wants to:
 ```bash
 pip install -r requirements.txt
 cd scripts
+python validate.py   # run after any code change, before trusting backtest output
 python main.py
 ```
 
 First run will fetch and cache data under `scripts/cache/` (gitignored) — this can take a few minutes depending on akshare's upstream sources. Subsequent runs reuse the cache; delete individual CSVs under `cache/` to force a refresh for one series.
+
+If this skill is installed somewhere read-only (e.g. a shared skills directory), set `MSRP_CACHE_DIR` / `MSRP_OUTPUT_DIR` to redirect the cache and output to a writable location instead.
 
 ## Key parameters (`scripts/config.py`)
 
