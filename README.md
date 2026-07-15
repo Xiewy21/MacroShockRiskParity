@@ -40,9 +40,20 @@ references/
   joint_rp_diagnosis_notes.md     # worked example: diagnosing a Sharpe gap across strategies/cap levels
 ```
 
-Methodology based on the public summary of a CICC research report
-(《量化配置模型(3):如何应对低利率环境》, June 2026). This repo is an
-independent reimplementation; no original report content is included.
+## Methodology reference
+
+The six-dimension macro shock overlay and risk-parity blending approach is
+based on the following CICC (中金公司) research report:
+
+> 陈宜筠, CFA (SAC S0080524080004 / SFC BTZ190); 周萧潇 (SAC S0080521010006 /
+> SFC BRA090); 刘均伟 (SAC S0080520120002 / SFC BQR365). 《量化配置模型（3）：
+> 如何应对低利率环境——基于宏观冲击的风险平价模型增强》. CICC Research,
+> published 2026-06-23.
+
+This repo is an independent reimplementation of the general approach
+described in that report's public summary; no original report text, tables,
+or charts are reproduced here, and none of the implementation choices below
+should be attributed to the report's authors.
 
 ## Disclaimer
 
