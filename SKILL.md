@@ -7,6 +7,12 @@ description: Backtest and run a multi-asset risk-parity allocation model (Asset 
 
 A multi-asset risk-parity backtesting model with a macroeconomic shock overlay. Three strategies share the same asset universe and rebalancing logic, differing only in the covariance matrix used to solve for risk-parity weights:
 
+> **Positioning**: this is a research/backtest model, not an execution-ready trading system. All
+> weights, shock signals, and backtest returns come from historical data and simplified
+> assumptions (month-end decision, next-trading-day execution, transaction costs on turnover only
+> — no live risk/margin management). Independent validation and risk review are required before
+> any live use; see the Disclaimer in [README.md](README.md).
+
 - **Asset RP** — sample covariance of daily asset returns.
 - **Macro RP** — covariance implied by each asset's rolling regression exposure to six macro shock factors.
 - **Joint RP** — trace-normalized blend of the two covariances above, with additional weight smoothing.
